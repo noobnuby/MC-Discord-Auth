@@ -14,13 +14,15 @@ gradle.properties
 group=com.noobnuby.plugin (group)
 version=1.0.0 (ver)
 paper_version=1.20.2 (papermc ver)
-copy_dir=/Users/noobnuby (copy folder !not str) 
+kommand_version=3.1.11 (kommand ver)
 ```
 
 # Build
 
 * `./gradlew paperJar`
 * `Gradle -> Tasks -> other -> paperJar`
+* `./gradlew runServer`
+* * `Gradle -> Tasks -> run paper -> runServer`
 
 # License
 
