@@ -38,5 +38,24 @@ bin/
 ### VS Code ###
 .vscode/
 
+### Paper Run ###
+/run/cache
+/run/config
+/run/libraries
+/run/logs
+/run/plugins
+/run/versions
+/run/world
+/run/world_nether
+/run/world_the_end
+/run/banned-ips.json
+/run/banned-players.json
+/run/commands.yml
+/run/help.yml
+/run/permissions.yml
+/run/usercache.json
+/run/version_history.json
+/run/whitelist.json
+
 ### Mac OS ###
 .DS_Store

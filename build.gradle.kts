@@ -1,13 +1,15 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import xyz.jpenilla.runpaper.task.RunServer
 
 plugins {
     kotlin("jvm") version "1.9.22"
     id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("xyz.jpenilla.run-paper") version "2.2.3"
 }
 
 group = property("group")!!
 version = property("version")!!
-val copy_dir = "${property("copy_dir")}"
+val paperVersion = "${property("paper_version")}"
 
 repositories {
     mavenCentral()
@@ -21,7 +23,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
-    implementation("xyz.icetang.lib:kommand-api:3.1.10")
+    implementation("xyz.icetang.lib:kommand-api:${property("kommand_version")}")
     compileOnly("io.papermc.paper:paper-api:${property("paper_version")}-R0.1-SNAPSHOT")
 }
 
@@ -46,13 +48,19 @@ tasks {
 
         from(sourceSets["main"].output)
 
-        if(copy_dir != "") {
-            doLast {
-                copy {
-                    from(archiveFile)
-                    into(if (File(copy_dir, archiveFileName.get()).exists()) copy_dir else copy_dir)
-                }
+        doLast {
+            copy {
+                from(archiveFile)
+                val plugins = File(rootDir, "run/plugins/")
+                into(if (File(plugins, archiveFileName.get()).exists()) plugins else plugins)
             }
         }
+    }
+
+    withType<RunServer> {
+        minecraftVersion(paperVersion)
+
+        minHeapSize = "512M"
+        maxHeapSize = "2G"
     }
 }
