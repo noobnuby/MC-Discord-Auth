@@ -22,7 +22,7 @@ kommand_version=3.1.11 (kommand ver)
 * `./gradlew paperJar`
 * `Gradle -> Tasks -> other -> paperJar`
 * `./gradlew runServer`
-* * `Gradle -> Tasks -> run paper -> runServer`
+* `Gradle -> Tasks -> run paper -> runServer`
 
 # License
 
