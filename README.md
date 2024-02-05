@@ -4,7 +4,7 @@
 
 # Library
 
-* [Kommand](https://github.com/monun/kommand)
+* [Kommand](https://github.com/gooddltmdqls/kommand)
 
 # Configuration
 
