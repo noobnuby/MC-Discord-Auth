@@ -1,28 +1,15 @@
-# Kotlin Plugin Template
+# MC-Discord-Auth
 
-코틀린 PaperMC Plugin 템플릿입니다.
-
-# Library
-
-* [Kommand](https://github.com/gooddltmdqls/kommand)
+마인크래프트 유저와 디스코드의 계정을 연동하는 플러그인 입니다.
 
 # Configuration
 
-gradle.properties
+config.yml
 
-```gradle
-group=com.noobnuby.plugin (group)
-version=1.0.0 (ver)
-paper_version=1.20.2 (papermc ver)
-kommand_version=3.1.11 (kommand ver)
+```yml
+BOT_TOKEN: "" (bot token)
+SERVER_NAME: "마크" (server name)
 ```
-
-# Build
-
-* `./gradlew paperJar`
-* `Gradle -> Tasks -> other -> paperJar`
-* `./gradlew runServer`
-* `Gradle -> Tasks -> run paper -> runServer`
 
 # License
 

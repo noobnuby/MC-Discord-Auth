@@ -23,7 +23,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
-    implementation("xyz.icetang.lib:kommand-api:${property("kommand_version")}")
+    implementation("net.dv8tion:JDA:5.0.0-beta.20")
     compileOnly("io.papermc.paper:paper-api:${property("paper_version")}-R0.1-SNAPSHOT")
 }
 
