@@ -2,6 +2,11 @@
 
 마인크래프트 유저와 디스코드의 계정을 연동하는 플러그인 입니다.
 
+# ScreenShot
+
+![screen.png](imgs/screen.png)
+![botscreen.png](imgs%2Fbotscreen.png)
+
 # Configuration
 
 config.yml

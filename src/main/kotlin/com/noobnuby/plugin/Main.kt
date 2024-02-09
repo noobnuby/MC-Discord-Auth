@@ -23,6 +23,5 @@ class Main : JavaPlugin() {
             registerEvents(LoginEvent(),this@Main)
         }
         JdaMain.Bot()
-        reloadConfig()
     }
 }

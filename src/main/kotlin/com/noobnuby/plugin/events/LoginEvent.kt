@@ -20,6 +20,5 @@ class LoginEvent: Listener {
             if (playerAuth[uuid] == null) PlayerAuthStr.SetAuthStr(uuid)
             e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, MiniMessage.miniMessage().deserialize("<green>아래의 코드를 디코 봇 DM으로 보내주세요\n\n<yellow>------<aqua>${playerAuth.get(uuid)}<yellow>------"))
         }
-        println("${playerAuth}")
     }
 }

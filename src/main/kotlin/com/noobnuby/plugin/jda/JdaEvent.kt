@@ -18,11 +18,9 @@ object JdaEvent : EventListener {
         }
         if(e is MessageReceivedEvent) {
             if (e.isFromType(ChannelType.PRIVATE)) {
-                System.out.printf("[PM] %s: %s\n", e.getAuthor().getName(), e.getMessage().getContentDisplay())
                 val matchingKey = playerAuth.entries.find { it.value == e.message.contentDisplay }?.key
 
                 if (matchingKey != null) {
-                    System.out.printf("[PM] %s: %s\n", e.getAuthor().getName(), e.getMessage().getContentDisplay())
                     File(Main.instance.dataFolder, "login.yml").apply {
                         val config = YamlConfiguration.loadConfiguration(this)
                         config.set(matchingKey.toString(), e.author.name)
